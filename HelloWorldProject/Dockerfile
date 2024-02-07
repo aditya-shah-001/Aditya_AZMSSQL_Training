@@ -15,6 +15,8 @@ EXPOSE 8000
 
 # Define environment variable
 ENV NAME World
+ENV PYTHONUNBUFFERED 1
+ENV DJANGO_SETTINGS_MODULE=HelloWorldProject.settings
 
 # Run app.py when the container launches
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
